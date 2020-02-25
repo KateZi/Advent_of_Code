@@ -8,8 +8,8 @@ def calc_fuel(mass):
 
 def calc_total():
     M = 0
-    f = open("Fuel_input", "r")
-    masses = f.readlines()
+    with open("Fuel_input", "r") as f:
+        masses = f.readlines()
     for mass in masses:
         M += calc_fuel(int(mass))
 
