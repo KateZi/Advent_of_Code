@@ -3,9 +3,10 @@ import re
 
 def populate_path(wire):
 
-    path = {(0, 0)}
+    path = {(0, 0): 0}
     x = 0
     y = 0
+    step = 0
 
     for inst in wire:
         temp = re.compile("([a-zA-Z]+)([0-9]+)")
@@ -18,28 +19,42 @@ def populate_path(wire):
         for _ in range(steps):
             x += h
             y += v
-            path.add((x, y))
+            step += 1
+            path[(x, y)] = step
 
     return path
 
 
+def calc_closest(intersections):
+    dist = [abs(x) + abs(y) for (x, y) in intersections]
+    dist.sort()
+    return dist[1]
+
+
+def calc_efficient(path1, path2, intersections):
+    min_steps = [path1[intersection] + path2[intersection] for intersection in intersections]
+    min_steps.sort()
+    return min_steps[1]
+
+
 def main():
-    with open("inputs/input.txt", "r") as f:
+    with open("inputs/Wires input", "r") as f:
         wires = f.read()
         wires = wires.split("\n")
 
-    wire1 = wires[0].split(",")
-    wire2 = wires[1].split(',')
+    for i in range(0, len(wires), 2):
+        wire1 = wires[i].split(",")
+        wire2 = wires[i+1].split(',')
 
-    path1 = populate_path(wire1)
-    path2 = populate_path(wire2)
+        path1 = populate_path(wire1)
+        path2 = populate_path(wire2)
 
-    intersections = [point for point in path1 if point in path2]
+        intersections = path1.keys() & path2.keys()
 
-    dist = [abs(x) + abs(y) for (x,y) in intersections]
-    dist.sort()
+        closest = calc_closest(intersections)
+        efficient = calc_efficient(path1, path2, intersections)
 
-    print(dist[1])
+        print(efficient)
 
 
 if __name__ == "__main__":
