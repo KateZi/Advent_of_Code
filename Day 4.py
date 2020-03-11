@@ -1,8 +1,6 @@
 def is_valid(password):
     prev = 0
-    super_prev = 0
-
-    has_double = False
+    count = dict()
 
     password = str(password)
 
@@ -10,20 +8,15 @@ def is_valid(password):
 
     for d in password:
         d = int(d)
-        if d < prev: return False
-        #case of 3 in a row
-        if d == super_prev and d == prev:
-            has_double = False
-        #case 2 in a row now found
-        elif d == prev:
-            has_double = True
-        #case 2 in a row has finished
-        elif has_double:
-            break
-        super_prev = prev
+        if d not in count.keys():
+            count[d] = 1
+        if d < prev:
+            return False
+        if d == prev:
+            count[d] = count.get(d) + 1
         prev = d
 
-    return has_double
+    return 2 in count.values()
 
 
 def count_in_range(rng):
@@ -36,12 +29,14 @@ def count_in_range(rng):
 
 
 def test():
-    passowrds = [112233, 123444, 111122, 123456, 122334, 112345, 123455, 112222, 111234, 112344]
-    correct = [True, False, True, False, True, True, True, True, False, True]
+    valid_passwords = [112233, 111122, 122334, 112345, 123455, 112222, 112344, 133344, 111233]
+    invalid_passwords = [123444, 123456, 111234, 111111, 111222, 111234]
 
-    result = list(map(is_valid, passowrds))
+    valid_result = list(map(is_valid, valid_passwords))
+    invalid_result = list(map(is_valid, invalid_passwords))
 
-    assert result == correct, print(result)
+    assert valid_result == len(valid_result)*[True], print(valid_result)
+    assert invalid_result == len(invalid_result) * [False], print(invalid_result)
 
 
 def main():
