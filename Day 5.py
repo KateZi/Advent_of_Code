@@ -6,75 +6,107 @@ class Operation(Enum):
     MULT = 2
     INPUT = 3
     OUTPUT = 4
+    JTRUE = 5
+    JFALSE = 6
+    ISLESS = 7
+    EQUALS = 8
     HALT = 99
 
 
-class Instruction:
+class Computer:
 
-    def __init__(self, pointer, memory):
+    def __init__(self, memory):
         self.memory = memory
-        self.pointer = pointer
+        self.pointer = 0
 
-        self.inst = str(memory[pointer])
-        self.num = len(self.inst)
+    def compute(self):
+        op = 0
+        while op != Operation.HALT:
+            instruction = str(self.memory[self.pointer])
+            length = len(instruction)
 
-        self.op = Operation(int((self.inst[-2] + self.inst[-1])))
+            op = self.get_op(instruction, length)
+            modes = self.get_modes(instruction, length)
 
-    def get_params(self):
-        mode_1 = int(self.inst[-3]) if self.num >= 3 else 0
-        mode_2 = int(self.inst[-4]) if self.num >= 4 else 0
+            self.perform_op(op, modes)
 
-        param_1 = self.memory[self.memory[self.pointer+1]] if mode_1 == 0 else self.memory[self.pointer+1]
-        param_2 = self.memory[self.memory[self.pointer+2]] if mode_2 == 0 else self.memory[self.pointer+2]
+    def get_op(self, instruction, length):
+        op = instruction[-2] + instruction[-1] if length > 1 else instruction[-1]
+        return Operation(int((op)))
 
-        return param_1, param_2
+    def get_modes(self, instruction, length):
+        modes = list()
+        for i in range(1,4):
+            mode = int(instruction[-2-i]) if length >= 2+i else 0
+            modes.append(mode)
 
-    def preform_op(self):
+        return modes
+
+    def get_param(self, pointer, mode):
+        param = self.memory[pointer] if mode == 0 else pointer
+
+        return param
+
+    def perform_op(self, op, modes):
         result = 0
-        if self.op == Operation.ADD:
-            param_1, param_2 = self.get_params()
-            result = param_1 + param_2
+        if op == Operation.ADD:
+            result = self.memory[self.get_param(self.pointer+1, modes[0])] + \
+                     self.memory[self.get_param(self.pointer+2, modes[1])]
+            self.memory[self.get_param(self.pointer+3, modes[2])] = result
             self.pointer += 4
-        elif self.op == Operation.MULT:
-            param_1, param_2 = self.get_params()
-            result = param_1 * param_2
+        elif op == Operation.MULT:
+            result = self.memory[self.get_param(self.pointer + 1, modes[0])] *\
+                     self.memory[self.get_param(self.pointer + 2, modes[1])]
+            self.memory[self.get_param(self.pointer + 3, modes[2])] = result
             self.pointer += 4
-        elif self.op == Operation.INPUT:
+        elif op == Operation.INPUT:
             result = int(input("Please enter the value to store: "))
+            self.memory[self.get_param(self.pointer+1, 0)] = result
             self.pointer += 2
-        elif self.op == Operation.OUTPUT:
-            param = self.memory[self.pointer+1]
+        elif op == Operation.OUTPUT:
+            param = self.memory[self.get_param(self.pointer+1, 0)]
             print(param)
             self.pointer += 2
-        elif self.op == Operation.HALT:
-            self.pointer = self.num
-        return result
-
-
-def compute(tape):
-    pointer = 0
-    while pointer < len(tape):
-        i = Instruction(pointer, tape)
-        if i.op == Operation.HALT:
-            print("Finished")
-            break
-        result = i.preform_op()
-        pointer = i.pointer
-        tape[tape[i.pointer-1]] = result
-
+        elif op == Operation.JTRUE:
+            if self.memory[self.get_param(self.pointer+1, modes[0])] != 0:
+                self.pointer = self.memory[self.get_param(self.pointer+2, modes[1])]
+            else:
+                self.pointer += 3
+        elif op == Operation.JFALSE:
+            if self.memory[self.get_param(self.pointer+1, modes[0])] == 0:
+                self.pointer = self.memory[self.get_param(self.pointer+2, modes[1])]
+            else:
+                self.pointer += 3
+        elif op == Operation.ISLESS:
+            param_1 = self.memory[self.get_param(self.pointer+1, modes[0])]
+            param_2 = self.memory[self.get_param(self.pointer+2, modes[1])]
+            result = 1 if param_1 < param_2 else 0
+            self.memory[self.get_param(self.pointer+3, modes[2])] = result
+            self.pointer += 4
+        elif op == Operation.EQUALS:
+            param_1 = self.memory[self.get_param(self.pointer + 1, modes[0])]
+            param_2 = self.memory[self.get_param(self.pointer + 2, modes[1])]
+            result = 1 if param_1 == param_2 else 0
+            self.memory[self.get_param(self.pointer + 3, modes[2])] = result
+            self.pointer += 4
+        elif op == Operation.HALT:
+            print("Halting")
 
 def test():
-    test_1 = [1002,4,3,4,33]
-    test_2 = [1101,100,-1,4,0]
-    compute(test_2)
+    tape_1 = [1002,4,3,4,33]
+    tape_2 = [3,0,4,0,99]
 
+    comp = Computer(tape_2)
+    comp.compute()
+
+    print(tape_2)
 
 def main():
     with open("inputs/Day 5 - TEST", "r") as f:
-        test = f.read()
         tape = list(map(int, f.read().split(',')))
 
-    compute(tape)
+    intCode_comp = Computer(tape)
+    intCode_comp.compute()
 
 
 if __name__=='__main__':

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b684d9e-81cc-4d90-942f-d097dad4c3c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Day 5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/Day 5 - TEST" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 5.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,35 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Day 5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="42" column="68" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day 2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///anaconda3/envs/pysot/lib/python3.7/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="309" selection-start-line="309" selection-end-line="309" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="551">
+              <caret line="88" column="36" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -54,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/inputs/Day 5 - TEST">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="2554" selection-start-column="2554" selection-end-column="2554" />
+              <caret column="69" lean-forward="true" selection-start-column="69" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -324,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583961970869</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Day 5 - Draft. Started with Instruction class but now it makes more sense to make it Machine (Computer). The code assumes that the op does have 2 digits, gonna fix that.">
+      <created>1584116749325</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1584116749326</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -349,7 +328,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3299363" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.18471338" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3299363" />
@@ -364,7 +343,8 @@
     <MESSAGE value="Day 3 - Finished" />
     <MESSAGE value="Day 4 - Part 2 has a bug ^\0/^" />
     <MESSAGE value="Day 4 - Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 4 - Done" />
+    <MESSAGE value="Day 5 - Draft. Started with Instruction class but now it makes more sense to make it Machine (Computer). The code assumes that the op does have 2 digits, gonna fix that." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 5 - Draft. Started with Instruction class but now it makes more sense to make it Machine (Computer). The code assumes that the op does have 2 digits, gonna fix that." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -385,34 +365,36 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Day 5.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Day 5.py</url>
-          <line>54</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Day 5.py</url>
-          <line>13</line>
+          <line>17</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Day 5.py</url>
-          <line>41</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Day 5.py</url>
-          <line>74</line>
+          <line>105</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>self.memory[self.memory[pointer]]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.memory[pointer]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>input[input[idx+1]] * input[input[idx+2]]</expression-string>
         <language-id>Python</language-id>
@@ -445,16 +427,6 @@
       </expression>
       <expression>
         <expression-string>input</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>curr</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>d == prev and has_double</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -543,8 +515,8 @@
     </entry>
     <entry file="file:///anaconda3/envs/pysot/lib/python3.7/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        <state relative-caret-position="178">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
         </state>
       </provider>
     </entry>
@@ -558,14 +530,14 @@
     <entry file="file://$PROJECT_DIR$/inputs/Day 5 - TEST">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="2554" selection-start-column="2554" selection-end-column="2554" />
+          <caret column="69" lean-forward="true" selection-start-column="69" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Day 5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="42" column="68" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
+        <state relative-caret-position="551">
+          <caret line="88" column="36" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
         </state>
       </provider>
     </entry>
