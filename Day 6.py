@@ -1,3 +1,5 @@
+from typing import List, Any
+
 orbits = dict()
 
 # Part 1
@@ -24,11 +26,28 @@ def run_part1():
 
 # Part 2
 def run_part2():
+    origin = orbits.get("YOU")
+    destination = orbits.get("SAN")
+    path_from = []
+    path_to = []
 
+    curr = origin[0]
+    while curr in orbits:
+        path_from.append(curr)
+        curr = orbits.get(curr)[0]
+
+    curr = destination[0]
+    while curr in orbits.keys():
+        path_to.append(curr)
+        curr = orbits.get(curr)[0]
+
+    intersection = [i for i in path_from if i in path_to][0]
+
+    print(path_from.index(intersection) + path_to.index(intersection))
 
 
 def main():
-    with open("inputs/Map Data", "r") as f:
+    with open("inputs/Test2 Map Data", "r") as f:
         for line in f:
             planets = line.split(")")
             planets[1] = planets[1].rstrip("\n")
@@ -38,7 +57,8 @@ def main():
             else:
                 orbits[planets[1]] = [planets[0]]
 
-    run_part1()
+    run_part2()
+
 
 if __name__=='__main__':
     main()

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b684d9e-81cc-4d90-942f-d097dad4c3c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Day 6 (Unused).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day 6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/Map Data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/Test Map Data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/Test2 Map Data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 6.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inputs/Map Data">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="1001" column="7" selection-start-line="1001" selection-start-column="7" selection-end-line="1001" selection-end-column="7" />
+            <state relative-caret-position="210">
+              <caret line="588" column="7" selection-start-line="588" selection-start-column="4" selection-end-line="588" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -28,44 +26,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Day 6.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="393">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day 6 (Unused).py">
+        <entry file="file://$PROJECT_DIR$/inputs/Test2 Map Data">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="61" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///anaconda3/envs/pysot/lib/python3.7/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="309" selection-start-line="309" selection-end-line="309" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="348" column="49" lean-forward="true" selection-start-line="348" selection-start-column="49" selection-end-line="348" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inputs/Test Map Data">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="180">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -84,6 +55,7 @@
       <find>len</find>
       <find>input</find>
       <find>TEST</find>
+      <find>san</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,6 +81,7 @@
         <option value="$PROJECT_DIR$/inputs/Map Data" />
         <option value="$PROJECT_DIR$/inputs/Test Map Data" />
         <option value="$PROJECT_DIR$/Day 6 (Unused).py" />
+        <option value="$PROJECT_DIR$/inputs/Test2 Map Data" />
         <option value="$PROJECT_DIR$/Day 6.py" />
       </list>
     </option>
@@ -147,6 +120,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/inputs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/inputs" />
     </key>
@@ -353,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584268078697</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Day 6 - Part 1, recursively">
+      <created>1584368361612</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1584368361612</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Day 6 - Part 1, recursively. It makes more sense for the &quot;moons&quot; to be the keys">
+      <created>1584369095239</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1584369095239</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -367,18 +357,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="726" y="0" width="714" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12698413" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1053391" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30963856" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37710842" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37710842" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.1746988" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.1746988" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3299363" />
@@ -386,6 +377,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12698413" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30963856" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37710842" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.1746988" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3299363" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3299363" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Day 2 - Finished, ugly" />
@@ -395,7 +405,9 @@
     <MESSAGE value="Day 4 - Done" />
     <MESSAGE value="Day 5 - Draft. Started with Instruction class but now it makes more sense to make it Machine (Computer). The code assumes that the op does have 2 digits, gonna fix that." />
     <MESSAGE value="Day 5 - Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 5 - Done" />
+    <MESSAGE value="Day 6 - Part 1, recursively" />
+    <MESSAGE value="Day 6 - Part 1, recursively. It makes more sense for the &quot;moons&quot; to be the keys" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 6 - Part 1, recursively. It makes more sense for the &quot;moons&quot; to be the keys" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -426,8 +438,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Day 6.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="46" />
+          <line>45</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -441,6 +453,16 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>zip(path_from, path_to)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>while curr</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>orbits.keys()</expression-string>
         <language-id>Python</language-id>
@@ -473,16 +495,6 @@
       </expression>
       <expression>
         <expression-string>input[input[idx+2]]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>input[input[idx+1]]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>op</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -590,24 +602,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inputs/Map Data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="1001" column="7" selection-start-line="1001" selection-start-column="7" selection-end-line="1001" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///anaconda3/envs/pysot/lib/python3.7/typing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="1499" column="8" selection-start-line="1499" selection-start-column="8" selection-end-line="1499" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inputs/Test Map Data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -618,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///anaconda3/envs/pysot/lib/python3.7/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="309" selection-start-line="309" selection-end-line="309" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day 6 (Unused).py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -632,10 +623,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/Test Map Data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/Map Data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="588" column="7" selection-start-line="588" selection-start-column="4" selection-end-line="588" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/envs/pysot/lib/python3.7/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputs/Test2 Map Data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Day 6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="393">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
